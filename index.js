@@ -13,6 +13,7 @@ function sha256(value) {
 }
 
 app.post("/meta-capi", async (req, res) => {
+  console.log("Webhook received:", req.body);
   const order = req.body;
 
   const eventId = order.name || String(order.id);
@@ -44,4 +45,5 @@ app.post("/meta-capi", async (req, res) => {
   res.send("ok");
 });
 
-app.listen(3000, () => console.log("Server running"));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log("Server running on", PORT));
