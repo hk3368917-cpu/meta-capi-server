@@ -5,8 +5,8 @@ import crypto from "crypto";
 const app = express();
 app.use(express.json());
 
-const PIXEL_ID = "PASTE_PIXEL_ID";
-const ACCESS_TOKEN = "PASTE_ACCESS_TOKEN";
+const PIXEL_ID = "1669011117589597";
+const ACCESS_TOKEN = "EAAUExgiHfZBkBRVoVMjOTODbU0pYW2ZA4wHZA8RcHmrxRM68aw7gAr1dP8nGOf40LJYeOA9gmgk59bpkkyR193Sl8a45ogE5PZA8c5U1wj72z2ZAKlVpht9ZA9J1BNkuvxZCWJoG2ZCNFcM1PLSXqaCGpszZC2SxMyVin3UAvtJViHfv3PrfE0l1y6gqTKqabmAZDZD";
 
 function sha256(value) {
   return crypto.createHash("sha256").update(value.trim().toLowerCase()).digest("hex");
